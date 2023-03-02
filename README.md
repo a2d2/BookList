@@ -621,7 +621,9 @@ return (
 </article>
 );
 };
-Props - Somewhat Dynamic Setup
+
+###### Props - Somewhat Dynamic Setup
+
 setup an object
 refactor vars to properties
 copy/paste and rename
