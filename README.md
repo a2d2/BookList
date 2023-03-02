@@ -621,7 +621,9 @@ return (
 </article>
 );
 };
-Props - Somewhat Dynamic Setup
+
+#### Props - Somewhat Dynamic Setup
+
 setup an object
 refactor vars to properties
 copy/paste and rename
@@ -665,7 +667,9 @@ return (
 </article>
 );
 };
-Access Props - Multiple Approaches
+
+##### Access Props - Multiple Approaches
+
 there is no right or wrong - again preference !!!
 
 Destructuring (object) JS Nuggets - Destructuring (object)
@@ -711,6 +715,7 @@ return (
 </article>
 );
 };
+
 Children Prop
 everything we render between component tags
 during the course we will mostly use it Context API
@@ -718,6 +723,7 @@ special prop, has to be "children"
 can place anywhere in JSX
 function BookList() {
 return (
+
 <section className='booklist'>
 <Book
         author={firstBook.author}

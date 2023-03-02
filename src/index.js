@@ -2,30 +2,40 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 
-const img =
-  'https://images-na.ssl-images-amazon.com/images/I/81QOUISS7VL._AC_UL600_SR600,400_.jpg';
-const title =
-  "The Courage to Be Free: Florida's Blueprint for America's Revival";
-const author = 'Jordan Moore';
+const firstBook = {
+  author: 'El Trollino',
+  title: 'HORA DE MIKELLINO: NUESTRA PRIMERA NOCHE',
+  img: 'https://panamericana.vtexassets.com/arquivos/ids/481626-1200-auto?v=638114855532200000&width=1200&height=auto&aspect=true',
+};
+const secondBook = {
+  author: 'Antonie Saint exupery',
+  title: 'EL PRINCIPITO',
+  img: 'https://panamericana.vtexassets.com/arquivos/ids/484839-1200-auto?v=638129391986400000&width=1200&height=auto&aspect=true',
+};
 
 function BookList() {
   return (
     <section className="booklist">
-      <Book job="developer" author={author} title={title} img={img} />
-      <Book number={22} author={author} title={title} img={img} />
+      <Book
+        author={firstBook.author}
+        title={firstBook.title}
+        img={firstBook.img}
+      />
+      <Book
+        author={secondBook.author}
+        title={secondBook.title}
+        img={secondBook.img}
+      />
     </section>
   );
 }
 
-const Book = (props) => {
-  console.log(props);
+const Book = ({ img, title, author }) => {
   return (
     <article className="book">
-      <img src={props.img} alt={props.title} />
-      <h2>{props.title}</h2>
-      <h4>{props.author} </h4>
-      <p>{props.job}</p>
-      <p>{props.number}</p>
+      <img src={img} alt={title} />
+      <h2>{title}</h2>
+      <h4>{author} </h4>
     </article>
   );
 };
