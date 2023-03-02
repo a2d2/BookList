@@ -529,9 +529,13 @@ return (
 
 );
 };
-toggle line comment Edit/Toggle Line Comment
-Props - Initial Setup
+
+edit -> toggle line comment Edit/Toggle Line Comment
+
+#### Props - Initial Setup
+
 refactor/clean up
+
 const author = 'Jordan Moore';
 const title = 'Interesting Facts For Curious Minds';
 const img = './images/book-1.jpg';

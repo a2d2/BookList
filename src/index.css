@@ -40,9 +40,9 @@ body {
 
 .book h2 {
   /* won't work */
-  color: red;
+  color: rgb(7, 7, 7);
   /* will work */
-  letter-spacing: 2px;
+  /* letter-spacing: 1px; */
 }
 .book h4 {
   color: #617d98;
