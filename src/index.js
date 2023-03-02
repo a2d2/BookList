@@ -13,39 +13,20 @@ function BookList() {
   );
 }
 
+const author = 'Jordan Moore';
 const Book = () => {
+  const title =
+    "The Courage to Be Free: Florida's Blueprint for America's Revival";
   return (
     <article className="book">
-      <Image />
-      <Title />
-      <Author />
+      <img
+        src="https://images-na.ssl-images-amazon.com/images/I/81QOUISS7VL._AC_UL600_SR600,400_.jpg"
+        alt="The Courage to Be Free: Florida's Blueprint for America's Revival"
+      />
+      <h3>{title}</h3>
+      <h4>{author.toUpperCase()}</h4>
     </article>
   );
-};
-
-const Image = () => (
-  <img
-    src="https://images-na.ssl-images-amazon.com/images/I/81QOUISS7VL._AC_UL600_SR600,400_.jpg"
-    alt="The Courage to Be Free: Florida's Blueprint for America's Revival"
-  />
-);
-const Title = () => {
-  return (
-    <h3>The Courage to Be Free: Florida's Blueprint for America's Revival</h3>
-  );
-};
-// const Author = () => (
-//   <h3 style={{ color: '#617d98', fontSize: '0.75rem', marginTop: '0.5rem' }}>
-//     Ron Desantis
-//   </h3>
-// );
-const Author = () => {
-  const inlineHeadingStyles = {
-    color: '#617d98',
-    fontSize: '0.75rem',
-    marginTop: '0.5rem',
-  };
-  return <h2 style={inlineHeadingStyles}>Jordan Moore </h2>;
 };
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

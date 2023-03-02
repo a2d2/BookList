@@ -499,18 +499,22 @@ return (
 </article>
 );
 };
+
+'''css
 .book h4 {
 color: #617d98;
 font-size: 0.75rem;
 margin-top: 0.5rem;
 letter-spacing: 2px;
 }
+
 {} in JSX means going back to JS Land
 value inside must be an expression (return value), can't be a statement
 const author = 'Jordan Moore';
 const Book = () => {
 const title = 'Interesting Facts For Curious Mindssssss';
 return (
+
 <article className='book'>
 <img
         src='./images/book-1.jpg'
