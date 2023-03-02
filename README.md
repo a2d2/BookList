@@ -191,6 +191,7 @@ return React.createElement('h2', {}, 'hello world');
 };
 function Greeting() {
 return (
+
 <div>
 <h2>hello world</h2>
 </div>
@@ -278,6 +279,7 @@ import ReactDOM from 'react-dom/client';
 
 function BookList() {
 return (
+
 <section>
 <Book />
 <Book />
@@ -289,6 +291,7 @@ return (
 
 const Book = () => {
 return (
+
 <article>
 <Image />
 <Title />
@@ -316,6 +319,7 @@ import ReactDOM from 'react-dom/client';
 
 function BookList() {
 return (
+
 <section>
 <Book />
 <Book />
@@ -327,6 +331,7 @@ return (
 
 const Book = () => {
 return (
+
 <article className='book'>
 <Image />
 <Title />
@@ -369,6 +374,7 @@ import './index.css';
 
 function BookList() {
 return (
+
 <section className='booklist'>
 <Book />
 <Book />
@@ -380,6 +386,7 @@ return (
 
 const Book = () => {
 return (
+
 <article className='book'>
 <Image />
 <Title />
@@ -441,6 +448,7 @@ const Image = () => (
 );
 whatever assets we place in public - instantly available
 domain(localhost)/asset
+
 JSX - CSS (inline styles)
 style prop
 {} in JSX means going back to JS Land
@@ -451,12 +459,13 @@ const Author = () => (
     Jordan Moore
   </h4>
 );
+
 css rules still apply (inline vs external css)
 .book h4 {
-  /* won't work */
-  color: red;
-  /* will work */
-  letter-spacing: 2px;
+/_ won't work _/
+color: red;
+/_ will work _/
+letter-spacing: 2px;
 }
 external libraries use inline css, so if you want to make some changes, reference the library docs and elements tab
 
@@ -472,11 +481,14 @@ return <h4 style={inlineHeadingStyles}>Jordan Moore </h4>;
 };
 FOR THE MOST PART, MULTIPLE APPROACHES AVAILABLE !!!
 AS LONG AS THE RESULT IS THE SAME, REALLY COMES DOWN TO PREFERENCE !!!!
-JSX - Javascript
+
+#### JSX - Javascript
+
 refactor to single book component (personal preference)
 remove inline css
 const Book = () => {
 return (
+
 <article className='book'>
 <img
         src='./images/book-1.jpg'
@@ -522,6 +534,7 @@ const img = './images/book-1.jpg';
 
 function BookList() {
 return (
+
 <section className='booklist'>
 <Book />
 <Book />
@@ -562,6 +575,7 @@ if the prop exists it will return value, otherwise no value
 
 function BookList() {
 return (
+
 <section className='booklist'>
 <Book job='developer' />
 <Book title='random title' number={22} />
@@ -618,6 +632,7 @@ img: 'https://images-na.ssl-images-amazon.com/images/I/81wgcld4wxL._AC_UL900_SR9
 
 function BookList() {
 return (
+
 <section className='booklist'>
 <Book
         author={firstBook.author}
@@ -669,6 +684,7 @@ destructure inside component
 const Book = (props) => {
 const { img, title, author } = props;
 return (
+
 <article className='book'>
 <img src={img} alt={title} />
 <h2>{title}</h2>
@@ -722,6 +738,7 @@ const Book = (props) => {
 const { img, title, author, children } = props;
 console.log(props);
 return (
+
 <article className='book'>
 <img src={img} alt={title} />
 <h2>{title}</h2>
@@ -766,6 +783,7 @@ const Book = (props) => {
 const { img, title, author } = props;
 
 return (
+
 <article className='book'>
 <img src={img} alt={title} />
 <h2>{title}</h2>
@@ -791,6 +809,7 @@ Proper List
 remove names and newNames
 function BookList() {
 return (
+
 <section className='booklist'>
 {books.map((book) => {
 console.log(book);
@@ -810,6 +829,7 @@ render component
 pass properties one by one
 function BookList() {
 return (
+
 <section className='booklist'>
 {books.map((book) => {
 console.log(book);
@@ -838,6 +858,7 @@ id: 2,
 
 function BookList() {
 return (
+
 <section className='booklist'>
 {books.map((book) => {
 console.log(book);
@@ -879,6 +900,7 @@ const Book = (props) => {
 const { img, title, author } = props.book;
 
 return (
+
 <article className='book'>
 <img src={img} alt={title} />
 <h2>{title}</h2>
@@ -925,6 +947,7 @@ return <Book {...book} key={book.id} />;
 const Book = (props) => {
 const { img, title, author } = props;
 return (
+
 <article className='book'>
 <img src={img} alt={title} />
 <h2>{title}</h2>
@@ -951,6 +974,7 @@ const handleButtonClick = () => {
 alert('handle button click');
 };
 return (
+
 <section>
 <button onClick={handleButtonClick}>click me</button>
 </section>
@@ -981,6 +1005,7 @@ const handleButtonClick = () => {
 alert('handle button click');
 };
 return (
+
 <section>
 <form>
 <h2>Typical Form</h2>
@@ -1081,6 +1106,7 @@ console.log(title);
 };
 
 return (
+
 <article className='book'>
 <img src={img} alt={title} />
 <h2>{title}</h2>
@@ -1111,6 +1137,7 @@ const Book = (props) => {
 const { img, title, author, displayValue } = props;
 
 return (
+
 <article className='book'>
 <img src={img} alt={title} />
 <h2>{title}</h2>
@@ -1135,6 +1162,7 @@ console.log(book);
 };
 
 return (
+
 <section className='booklist'>
 {books.map((book) => {
 return <Book {...book} key={book.id} getBook={getBook} />;
@@ -1148,6 +1176,7 @@ const { img, title, author, getBook, id } = props;
 // console.log(props);
 
 return (
+
 <article className='book'>
 <img src={img} alt={title} />
 <h2>{title}</h2>
@@ -1197,6 +1226,7 @@ Import and Export Statements
 remove all getBook code
 function BookList() {
 return (
+
 <section className='booklist'>
 {books.map((book) => {
 return <Book {...book} key={book.id} />;
@@ -1209,6 +1239,7 @@ const Book = (props) => {
 const { img, title, author } = props;
 
 return (
+
 <article className='book'>
 <img src={img} alt={title} />
 <h2>{title}</h2>
@@ -1265,6 +1296,7 @@ const Book = (props) => {
 const { img, title, author } = props;
 
 return (
+
 <article className='book'>
 <img src={img} alt={title} />
 <h2>{title}</h2>
@@ -1319,6 +1351,7 @@ index.js
 
 const BookList = () => {
 return (
+
 <section className='booklist'>
 {books.map((book, index) => {
 return <Book {...book} key={book.id} number={index} />;
@@ -1331,6 +1364,7 @@ const Book = (props) => {
 const { img, title, author, number } = props;
 
 return (
+
 <article className='book'>
 <img src={img} alt={title} />
 <h2>{title}</h2>
@@ -1371,6 +1405,7 @@ index.js
 function BookList() {
 return (
 <>
+
 <h1>amazon best sellers</h1>
 <section className='booklist'>
 {books.map((book) => {
