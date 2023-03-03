@@ -716,7 +716,8 @@ return (
 );
 };
 
-Children Prop
+### Children Prop
+
 everything we render between component tags
 during the course we will mostly use it Context API
 special prop, has to be "children"
@@ -771,7 +772,9 @@ align-items: start;
 .book p {
 margin: 1rem 0 0.5rem;
 }
-Simple List
+
+#### Simple List
+
 Javascript Nuggets - Map
 
 refactor

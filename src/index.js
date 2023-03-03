@@ -25,17 +25,26 @@ function BookList() {
         author={secondBook.author}
         title={secondBook.title}
         img={secondBook.img}
-      />
+      >
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+          Voluptatibus, impedit. Odio dolore sint dolorum corrupti alias officia
+          eum doloribus ut iste, illum voluptatibus assumenda rem sit quibusdam
+          veniam, hic doloremque.
+        </p>
+        <button>click me</button>
+      </Book>
     </section>
   );
 }
 
-const Book = ({ img, title, author }) => {
+const Book = ({ img, title, author, children }) => {
   return (
     <article className="book">
       <img src={img} alt={title} />
       <h2>{title}</h2>
       <h4>{author} </h4>
+      {children}
     </article>
   );
 };
