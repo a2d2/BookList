@@ -811,7 +811,8 @@ return (
 );
 };
 
-can't render objects in React
+### can't render objects in React
+
 function BookList() {
 return <section className='booklist'>{books}</section>;
 }
@@ -845,7 +846,9 @@ console.log(book);
 
 );
 }
-render component
+
+#### render component
+
 pass properties one by one
 function BookList() {
 return (
@@ -900,12 +903,15 @@ return <Book book={book} key={index} />;
 </section>
 );
 }
-Pass The Entire Object
+
+### Pass The Entire Object
+
 render component
 pass entire object
 Destructuring (object) JS Nuggets - Destructuring (object)
 function BookList() {
 return (
+
 <section className='booklist'>
 {books.map((book) => {
 console.log(book);
@@ -938,7 +944,9 @@ return (
 </article>
 );
 };
-My Personal Preference
+
+#### My Personal Preference
+
 utilize spread operator (...) - copy values
 Spread Operator
 JS Nuggets - Spread Operator
@@ -956,6 +964,7 @@ console.log(someObject);
 console.log(newObject);
 function BookList() {
 return (
+
 <section className='booklist'>
 {books.map((book) => {
 return <Book {...book} key={book.id} />;
@@ -978,7 +987,9 @@ return (
 const Book = ({ img, title, author }) => {
 // rest of the code
 };
-Events - Fundamentals
+
+### Events - Fundamentals
+
 Vanilla JS
 const btn = document.getElementById('btn');
 
