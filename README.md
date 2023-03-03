@@ -171,7 +171,9 @@ settings.json
 "emmet.includeLanguages": {
 "javascript": "javascriptreact"
 },
-ES7 Snippets
+
+### ES7 Snippets
+
 rafce (arrow func with export)
 rfce (regular func with export )
 same as the file name
@@ -808,6 +810,7 @@ return (
 </article>
 );
 };
+
 can't render objects in React
 function BookList() {
 return <section className='booklist'>{books}</section>;
