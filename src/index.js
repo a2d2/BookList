@@ -22,10 +22,6 @@ function BookList() {
     <section className="booklist">
       <EventExamples />
       {books.map((book) => {
-        /* {
-          const { img, title, author, id } = book;
-        return <Book img={img} title={title} author={author} key={id} />; 
-        }*/
         return <Book {...book} key={book.id} />; //spread operator
       })}
     </section>
@@ -57,7 +53,6 @@ const EventExamples = () => {
 
 const Book = (props) => {
   const { img, author, title } = props;
-  console.log(props);
   return (
     <article className="book">
       <img src={img} alt={title} />
