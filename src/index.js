@@ -18,17 +18,21 @@ const books = [
 ];
 
 function BookList() {
+  const someValue = 'shakeAndBake';
+  const displayValue = () => {
+    console.log(someValue);
+  };
   return (
     <section className="booklist">
       {books.map((book) => {
-        return <Book {...book} key={book.id} />; //spread operator
+        return <Book {...book} key={book.id} displayValue={displayValue} />; //spread operator
       })}
     </section>
   );
 }
 
 const Book = (props) => {
-  const { img, author, title } = props;
+  const { img, author, title, displayValue } = props;
   // const displayTitle = () => {
   //   console.log(title);
   // };
@@ -39,6 +43,10 @@ const Book = (props) => {
       <h4>{author} </h4>
       {/* Anonymous function instead of calling the function "displayTitle" like onClick={ displayTitle} we execute the function inside the event */}
       <button onClick={() => console.log(title)}>display title</button>
+      <div>
+        {/* As far as data flow, we can only pass props down from the parent to the child */}
+        <button onClick={displayValue}>click me</button>
+      </div>
     </article>
   );
 };

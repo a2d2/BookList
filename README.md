@@ -1157,7 +1157,9 @@ return (
 };
 
 remove button
-Prop Drilling
+
+### Prop Drilling
+
 react data flow - can only pass props down
 alternatives Context API, redux, other state libraries
 function BookList() {
@@ -1188,7 +1190,9 @@ return (
 </article>
 );
 };
-More Complex Example
+
+### More Complex Example
+
 initial setup
 create getBook function in booklist
 accepts id as an argument and finds the book
@@ -1228,7 +1232,9 @@ return (
 </article>
 );
 };
-two fixes
+
+### two fixes
+
 first option - setup wrapper
 const Book = (props) => {
 const { img, title, author, getBook, id } = props;
@@ -1237,6 +1243,7 @@ const getSingleBook = () => {
 getBook(id);
 };
 return (
+
 <article className='book'>
 <img src={img} alt={title} />
 <h2>{title}</h2>
@@ -1245,7 +1252,9 @@ return (
 </article>
 );
 };
-two fixes
+
+### two fixes
+
 second option - wrap in the anonymous arrow function
 const Book = (props) => {
 const { img, title, author, getBook, id } = props;
@@ -1254,6 +1263,7 @@ const getSingleBook = () => {
 getBook(id);
 };
 return (
+
 <article className='book'>
 <img src={img} alt={title} />
 <h2>{title}</h2>
@@ -1264,7 +1274,9 @@ return (
 
 );
 };
-Import and Export Statements
+
+### Import and Export Statements
+
 remove all getBook code
 function BookList() {
 return (
