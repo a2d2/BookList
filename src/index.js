@@ -29,15 +29,26 @@ function BookList() {
 }
 
 const EventExamples = () => {
-  const handleFormInput = () => {
-    console.log('handle form input');
+  //return <h1>eventos</h1>
+  const handleFormInput = (event) => {
+    console.log(event);
+    // e.target - element
+    console.log(`Input Name : ${event.target.name}`);
+    console.log(`Input Value : ${event.target.value}`);
+    // console.log('handle form input');
   };
   const handleButtonClick = () => {
     alert('handle button click');
   };
+  const handleFormSubmission = (event) => {
+    event.preventDefault();
+    console.log('form submitted');
+  };
+
   return (
     <section>
       <form>
+        {/* <form onSubmit={handleFormSubmission}> */}
         <h2>Typical Form</h2>
         <input
           type="text"
@@ -45,8 +56,16 @@ const EventExamples = () => {
           onChange={handleFormInput}
           style={{ margin: '1rem 0' }}
         />
+
+        {/* otra opcion seria agregar un boton de typo "submit" y mantener la linea <form onSubmit={handleFormSubmission}> de arriba removiendo la linea inmediatmanete anterior <form> */}
+        {/* <button type="submit">submit</button> */}
+        <button type="submit" onClick={handleFormSubmission}>
+          submit
+        </button>
+        <div>
+          <button onClick={handleButtonClick}>click me</button>
+        </div>
       </form>
-      <button onClick={handleButtonClick}>click me</button>
     </section>
   );
 };

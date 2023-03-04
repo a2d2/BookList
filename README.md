@@ -1051,7 +1051,9 @@ style={{ margin: '1rem 0' }}
 </section>
 );
 };
-Event Object and Form Submission
+
+### Event Object and Form Submission
+
 const EventExamples = () => {
 const handleFormInput = (e) => {
 console.log(e);
@@ -1068,6 +1070,7 @@ e.preventDefault();
 console.log('form submitted');
 };
 return (
+
 <section>
 {/_ add onSubmit Event Handler _/}
 <form onSubmit={handleFormSubmission}>
