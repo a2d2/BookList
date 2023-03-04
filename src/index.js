@@ -37,7 +37,7 @@ const Book = (props) => {
       <img src={img} alt={title} />
       <h2>{title}</h2>
       <h4>{author} </h4>
-      {/* Anonymous function instead of calling the function "displayTitle" like onClick={ displayTitle} */}
+      {/* Anonymous function instead of calling the function "displayTitle" like onClick={ displayTitle} we execute the function inside the event */}
       <button onClick={() => console.log(title)}>display title</button>
     </article>
   );
