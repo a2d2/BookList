@@ -1092,12 +1092,15 @@ alternative approach
 <button type='submit' onClick={handleFormSubmission}>
 submit form
 </button>
-Mind Grenade
+
+### Mind Grenade
+
 alternative approach
 pass anonymous function (in this case arrow function)
 one liner - less code
 const EventExamples = () => {
 return (
+
 <section>
 <button onClick={() => console.log('hello there')}>click me</button>
 </section>
@@ -1120,11 +1123,14 @@ style={{ margin: '1rem 0' }}
 </section>
 );
 };
-Mind Grenade #2
+
+### Mind Grenade #2
+
 remove EventsExamples
 components are independent by default
 function BookList() {
 return (
+
 <section className='booklist'>
 {books.map((book) => {
 return <Book {...book} key={book.id} />;
@@ -1149,6 +1155,7 @@ return (
 </article>
 );
 };
+
 remove button
 Prop Drilling
 react data flow - can only pass props down
@@ -1159,6 +1166,7 @@ const displayValue = () => {
 console.log(someValue);
 };
 return (
+
 <section className='booklist'>
 {books.map((book) => {
 return <Book {...book} key={book.id} displayValue={displayValue} />;
