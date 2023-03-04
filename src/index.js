@@ -37,9 +37,9 @@ const EventExamples = () => {
     console.log(`Input Value : ${event.target.value}`);
     // console.log('handle form input');
   };
-  const handleButtonClick = () => {
-    alert('handle button click');
-  };
+  // const handleButtonClick = () => {
+  //   alert('handle button click');
+  // };
   const handleFormSubmission = (event) => {
     event.preventDefault();
     console.log('form submitted');
@@ -47,8 +47,7 @@ const EventExamples = () => {
 
   return (
     <section>
-      <form>
-        {/* <form onSubmit={handleFormSubmission}> */}
+      <form onSubmit={handleFormSubmission}>
         <h2>Typical Form</h2>
         <input
           type="text"
@@ -57,13 +56,10 @@ const EventExamples = () => {
           style={{ margin: '1rem 0' }}
         />
 
-        {/* otra opcion seria agregar un boton de typo "submit" y mantener la linea <form onSubmit={handleFormSubmission}> de arriba removiendo la linea inmediatmanete anterior <form> */}
-        {/* <button type="submit">submit</button> */}
-        <button type="submit" onClick={handleFormSubmission}>
-          submit
-        </button>
+        <button type="submit">submit</button>
         <div>
-          <button onClick={handleButtonClick}>click me</button>
+          {/* Anonymous function instead of calling the function "handleButtonClick" ñike onClick={ handleButtonClick} */}
+          <button onClick={() => alert('handle button click')}>click me</button>
         </div>
       </form>
     </section>
