@@ -18,18 +18,21 @@ function BookList() {
 
   return (
     <section className="booklist">
-      {books.map((book) => {
-        return <Book {...book} key={book.id} getBook={getBook} />; //spread operator
+      {books.map((book, index) => {
+        return (
+          <Book {...book} key={book.id} getBook={getBook} number={index} />
+        ); //spread operator
       })}
     </section>
   );
 }
 
 const Book = (props) => {
-  const { img, author, title, getBook, id } = props;
+  const { img, author, title, getBook, id, number } = props;
   // const getSingleBook = () => {
   //   getBook(id);
   // };
+  console.log(number);
   return (
     <article className="book">
       <img src={img} alt={title} />
@@ -44,6 +47,7 @@ const Book = (props) => {
         {/* Or we can include the function inside the event in one single line as
         this: */}
         <button onClick={() => getBook(id)}>click me</button>
+        <span className="number">#{number + 1}</span>
       </div>
     </article>
   );

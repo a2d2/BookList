@@ -11,6 +11,12 @@ export const books = [
     img: 'https://panamericana.vtexassets.com/arquivos/ids/484839-1200-auto?v=638129391986400000&width=1200&height=auto&aspect=true',
     id: 2,
   },
+  {
+    author: 'Antonie Saint exupery',
+    title: 'EL PRINCIPITO',
+    img: 'https://panamericana.vtexassets.com/arquivos/ids/484839-1200-auto?v=638129391986400000&width=1200&height=auto&aspect=true',
+    id: 3,
+  },
 ];
 
 //export default books;

@@ -1303,7 +1303,9 @@ return (
 
 );
 };
-setup two files in src books.js and Book.js
+
+### setup two files in src books.js and Book.js
+
 cut books array from index.js
 add to books.js
 books.js
@@ -1322,6 +1324,7 @@ img: 'https://images-na.ssl-images-amazon.com/images/I/81wgcld4wxL._AC_UL900_SR9
 id: 2,
 },
 ];
+
 two flavors named and default exports
 
 with named exports names MUST match
@@ -1342,6 +1345,7 @@ img: 'https://images-na.ssl-images-amazon.com/images/I/81wgcld4wxL._AC_UL900_SR9
 id: 2,
 },
 ];
+
 index.js
 
 import { books } from './books';
@@ -1397,7 +1401,9 @@ img: img3,
 id: 3,
 },
 ];
-Challenges
+
+### Challenges
+
 setup numbers
 don't worry about css
 hint - index (second parameter in map)
@@ -1429,6 +1435,7 @@ return (
 
 );
 };
+
 index.css
 
 .book {
