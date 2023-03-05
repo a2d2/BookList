@@ -40,7 +40,7 @@ const Book = (props) => {
       <h4>{author} </h4>
       <button onClick={() => console.log(title)}>display title</button>
       <div>
-        {/* this will not work since we will always be executing onClick function */}
+        {/* this will not work since we will always be executing onClick function: */}
         {/* <button onClick={getBook(id)}>click me</button> */}
         {/* One way to solve the issue is by doing the following plus adding the funtion above called getSingleBook
         <button onClick={getSingleBook}>click me</button> */}
