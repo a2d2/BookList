@@ -1478,6 +1478,7 @@ return <Book {...book} key={book.id} />;
 </>
 );
 }
+
 index.css
 
 h1 {
@@ -1485,6 +1486,7 @@ text-align: center;
 margin-top: 4rem;
 text-transform: capitalize;
 }
+
 public/index.html
 
 <title>Best Sellers</title>

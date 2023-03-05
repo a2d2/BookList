@@ -17,13 +17,16 @@ function BookList() {
   //getBook(2);
 
   return (
-    <section className="booklist">
-      {books.map((book, index) => {
-        return (
-          <Book {...book} key={book.id} getBook={getBook} number={index} />
-        ); //spread operator
-      })}
-    </section>
+    <>
+      <h1>Libros mas vendidos</h1>
+      <section className="booklist">
+        {books.map((book, index) => {
+          return (
+            <Book {...book} key={book.id} getBook={getBook} number={index} />
+          ); //spread operator
+        })}
+      </section>
+    </>
   );
 }
 
